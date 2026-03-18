@@ -14,13 +14,24 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" crossorigin="anonymous" async></script>
 <style>
   :root {
-    --lim: #e8c5a0;    --lim-dark: #c8935a;    --lim-text: #6b3a10;
-    --der: #a8c8b8;    --der-dark: #5a9478;    --der-text: #1a4a32;
-    --int: #b8c8e8;    --int-dark: #5a78c8;    --int-text: #1a2a5a;
-    --ser: #e8b8c8;    --ser-dark: #c8587a;    --ser-text: #5a1a2a;
-    --cream: #fdf8f2;
-    --ink: #2a2218;
-    --rule: #d4c4a8;
+    /* Middlesex brand: crimson, black, white, grays */
+    --mx-red:   #cf003d;
+    --mx-black: #111111;
+    --mx-white: #ffffff;
+    --mx-gray1: #f4f4f4;
+    --mx-gray2: #e0e0e0;
+    --mx-gray3: #9e9e9e;
+    --mx-gray4: #444444;
+
+    /* Topic accents — all in-brand */
+    --lim:      #fce8ee;   --lim-dark: #cf003d;   --lim-text: #8a0028;
+    --der:      #ebebeb;   --der-dark: #111111;   --der-text: #111111;
+    --int:      #f4f4f4;   --int-dark: #555555;   --int-text: #222222;
+    --ser:      #f8e0e8;   --ser-dark: #9a0030;   --ser-text: #660020;
+
+    --cream: #fafafa;
+    --ink:   #111111;
+    --rule:  #e0e0e0;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +55,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #9b8060;
+    color: var(--mx-red);
     margin-bottom: 0.4rem;
   }
   header h1 {
@@ -56,7 +67,7 @@
   }
   header p {
     font-size: 0.9rem;
-    color: #7a6a54;
+    color: var(--mx-gray4);
     font-style: italic;
     max-width: 520px;
     margin: 0 auto;
@@ -78,7 +89,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-weight: 400;
-    color: #6a5a44;
+    color: var(--mx-gray4);
   }
   .legend-dot {
     width: 14px; height: 14px;
@@ -168,7 +179,7 @@
 
   .tile-count {
     font-size: 0.68rem;
-    color: #a09070;
+    color: var(--mx-gray3);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -178,7 +189,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(30,20,10,0.55);
+    background: rgba(0,0,0,0.6);
     z-index: 100;
     align-items: center;
     justify-content: center;
@@ -236,8 +247,7 @@
     background: none; border: none;
     font-size: 1.4rem;
     cursor: pointer;
-    color: #a09070;
-    line-height: 1;
+    color: var(--mx-gray3);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     transition: color 0.15s;
@@ -257,7 +267,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #a09070;
+    color: var(--mx-gray3);
     margin-bottom: 0.35rem;
   }
   .problem-q {
@@ -274,7 +284,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     cursor: pointer;
-    color: #a09070;
+    color: var(--mx-gray3);
     user-select: none;
     padding: 0.3rem 0;
     list-style: none;
@@ -294,7 +304,7 @@
     font-size: 0.9rem;
     line-height: 1.6;
     border-left: 3px solid var(--rule);
-    color: #4a3a28;
+    color: var(--mx-gray4);
   }
   .modal.lim .answer-box { border-color: var(--lim-dark); }
   .modal.der .answer-box { border-color: var(--der-dark); }
